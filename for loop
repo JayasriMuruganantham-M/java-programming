@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class num {
+    public static void main ( String [] args){
+        int i=10;
+        Scanner scanner=new Scanner(System.in);
+        for(i=1;i<=10;i++)
+        {
+            System.out.println(i);
+        }
+    }
+}
+
+
+SYNTAX:
+for (initial_condition; boolean_expression; iteration)
+ {
+ // loop block
+ }
