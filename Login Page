@@ -1,0 +1,15 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner data = new Scanner(System.in);
+        System.out.println("Enter a username:");
+        String userName = data.nextLine();
+        System.out.println("Enter a password:");
+        String password = data.nextLine();
+        if (userName.equals("admin") && password.equals("admin@123")) {
+            System.out.println("Welcome to login page");
+        } else {
+            System.out.println("Exit");
+        }
+    }
+}
