@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class num {
+    public static void main ( String [] args){
+        int num=18;
+        Scanner scanner=new Scanner(System.in);
+        do{
+            if(num%2==0){
+            System.out.println("Number is even ");
+        }
+        else{
+            System.out.println("Number is odd");
+        }
+        num--;
+        }while(num>=2);
+    }
+}
+
+
+SYNTAX:
+do
+{
+  //loop block
+}while(boolean _expression);
