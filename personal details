@@ -1,0 +1,33 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter Firstname");
+        String firstName = scanner.nextLine();
+        System.out.println("Firstname: " + firstName);
+        System.out.println("Enter Lastname");
+        String lastName = scanner.nextLine();
+        System.out.println("Lastname: " + lastName);
+        System.out.println("Enter Surname");
+        String surname = scanner.nextLine();  
+        System.out.println("Surname: " + surname);
+        System.out.println("Enter Height");
+        double height = scanner.nextDouble();
+        System.out.println("Height: " + height);
+        System.out.println("Enter Weight");
+        float weight = scanner.nextFloat();
+        System.out.println("Weight: " + weight);
+        System.out.println("Enter Roll Number");
+        int rollNumber = scanner.nextInt();
+        System.out.println("Roll Number: " + rollNumber);
+        System.out.println("Enter your Age ");
+        short age = scanner.nextShort();
+        System.out.println("Age: " + age);
+        System.out.println("Enter your Aadhar Number");
+        long aadharNumber = scanner.nextLong();
+        System.out.println("Aadhar Number: " + aadharNumber);
+        System.out.println("Are you a student?");
+        boolean isStudent = scanner.nextBoolean();
+        System.out.println("Is Student: " + isStudent);
+    }
+}
