@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in); 
+        String[] arr = {"Dog", "Cat", "Monkey", "Lion"};
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i].equals("Monkey")) {
+                arr[i] = "Elephant";
+                System.out.println("Update: " + arr[i]);
+            }
+        }
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(  arr[i]);
+        }
+    }
+}
