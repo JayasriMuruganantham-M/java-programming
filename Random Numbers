@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class number{
+    public static void main(String[] args) {
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Enter the SN:");
+        int SN=scanner.nextInt();
+        System.out.println("Enter the EN:");
+        int EN=scanner.nextInt();
+        double random=SN + Math.random() * (EN - SN + 1);
+        System.out.println("random number:"+random);
+        System.out.println(random);
+    }
+}
+
+OUTPUT:
+Enter the SN:
+34
+Enter the EN:
+2
+random number:6.466056475518418
+6.466056475518418
