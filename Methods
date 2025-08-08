@@ -1,0 +1,118 @@
+import java.util.Scanner;
+public class main {
+   public static void main (String name ){
+    System.out.println(name);
+}
+public static void main(String [] args){
+    System.out.println("Jayasri");
+}
+}
+OUTPUT:
+Jayasri
+
+import java.util.Scanner;
+public class main {
+   static void mymethod (int x,int y){
+    System.out.println(x+y);
+}
+public static void main(String [] args){
+    mymethod(1,1);
+}
+}
+
+OUTPUT:
+2
+
+import java.util.Scanner;
+public class main {
+   static void mymethod (String name,String value){
+    System.out.println(name + value);
+}
+public static void main(String [] args){
+    mymethod("Jaya","Sri");
+}
+}
+
+OUTPUT:
+JayaSri
+
+import java.util.Scanner;
+public class main {
+  public static void mymethod (String name,String value,int age,int weight )
+  {
+    System.out.println(name+" "+ value +" "+ age +" "+weight +" " );
+}
+public static void main(String [] args){
+    mymethod("Jaya","Sri",20,56);
+}
+}
+
+OUTPUT:
+Jaya Sri 20 56 
+
+import java.util.Scanner;
+public class Calculator {
+    public static double add(double a, double b) {
+        return a + b;
+    }
+    public static double subtract(double a, double b) {
+        return a - b;
+    }
+    public static double multiply(double a, double b) {
+        return a * b;
+    }
+    public static double divide(double a, double b) {
+        if (b == 0) {
+            System.out.println("Error: Division by zero!");
+            return 0;
+        }
+        return a / b;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter first number: ");
+        double num1 = sc.nextDouble();
+        System.out.print("Enter second number: ");
+        double num2 = sc.nextDouble();
+        System.out.println("\nChoose operation:");
+        System.out.println("1. Addition");
+        System.out.println("2. Subtraction");
+        System.out.println("3. Multiplication");
+        System.out.println("4. Division");
+        System.out.print("Enter your choice: ");
+        int choice = sc.nextInt();
+        double result = 0;
+        switch (choice) {
+            case 1:
+                result = add(num1, num2);
+                break;
+            case 2:
+                result = subtract(num1, num2);
+                break;
+            case 3:
+                result = multiply(num1, num2);
+                break;
+            case 4:
+                result = divide(num1, num2);
+                break;
+            default:
+                System.out.println("Invalid choice!");
+                return;
+        }
+        System.out.println("Result: " + result);
+    }
+}
+
+OUTPUT:
+Enter first number: 4
+Enter second number: 5
+
+Choose operation:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+Enter your choice: 1
+Result: 9.0
+
+
