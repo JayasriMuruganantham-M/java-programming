@@ -1,0 +1,299 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner x = new Scanner(System.in);
+	    System.out.println("ENTER YOUR NAME:");
+	    String n=x.nextLine();
+	    char mystr= n.charAt(0);
+		System.out.println(mystr);
+	    int my= n.codePointAt(3);
+		System.out.println(my);
+		int m =n.codePointBefore(7);
+		System.out.println(m);
+	}
+}
+OUTPUT:
+ENTER YOUR NAME:
+Jayasri
+J
+97
+105
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner x = new Scanner(System.in);
+        System.out.println("Enter any String1:");
+        String str1 = x.nextLine();
+        System.out.println("Enter any String2:");
+        String str2 = x.nextLine();
+        int mystr = str1.codePointCount(0, str1.length());
+        System.out.println(mystr);
+        int my = str1.compareTo(str2);
+        System.out.println(my);
+    }
+}
+OUTPUT:
+Enter any String1:
+Jayasri
+Enter any String2:
+Muruganantham
+7
+-3
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner x = new Scanner(System.in);
+        System.out.println("Enter any String1:");
+        String str1 = x.nextLine();
+        System.out.println("Enter any String2:");
+        String str2 = x.nextLine();
+        int mystr = str1.compareToIgnoreCase(str2);
+        System.out.println("Compare: " + mystr);
+        String my = str1.concat(str2);
+        System.out.println("Concate: " + my);
+    }
+}
+
+OUTPUT:
+
+Enter any String1:
+jayasri
+Enter any String2:
+sri
+Compare: -9
+Concate: jayasrisri
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner x = new Scanner(System.in);
+        System.out.println("Enter any String1:");
+        String str1 = x.nextLine();
+        boolean my = str1.contains("jayasri");
+        System.out.println(my);
+        boolean mystr = str1.contentEquals("ya");
+        System.out.println(mystr);
+        boolean mystrin = str1.contentEquals("ri");
+        System.out.println(mystrin);
+        boolean mystring = str1.contentEquals("jayasri");
+        System.out.println(mystring);
+    }
+}
+
+OUTPUT:
+Enter any String1:
+jayasri
+true
+false
+false
+true
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        char[] data = {'j', 'a', 'y', 'a', 's', 'r', 'i'};
+        String str = String.copyValueOf(data,0,7);
+        System.out.println(str);
+        System.out.println(str.endsWith("j")); 
+               System.out.println(str.endsWith("i")); 
+ 
+    }
+}
+
+OUTPUT:
+jayasri
+false
+true
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number of characters: ");
+        int n = sc.nextInt();
+        sc.nextLine(); 
+        char[] data = new char[n];
+        for (int i = 0; i < n; i++) {
+            System.out.print("Enter character " + (i + 1) + ": ");
+            data[i] = sc.next().charAt(0);
+        }
+        int length = Math.min(7, data.length);
+        String str = String.copyValueOf(data, 0, length);
+        System.out.println("String: " + str);
+        System.out.println(str.endsWith("j"));
+        System.out.println(str.endsWith("i"));
+    }
+}
+OUTPUT:
+Enter number of characters: 7
+Enter character 1: J
+Enter character 2: A
+Enter character 3: Y
+Enter character 4: A
+Enter character 5: S
+Enter character 6: R
+Enter character 7: I
+String: JAYASRI
+false
+false
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter some text:");
+        String input = sc.nextLine();
+        char[] data = input.toCharArray();
+        String str = String.copyValueOf(data);
+        System.out.println("String from char array: " + str);
+        char[] charArray = str.toCharArray();
+        System.out.print("Char array from string: ");
+        for (char c : charArray) {
+            System.out.print(c + " ");
+        }
+        System.out.println();
+        String str2 = String.copyValueOf(charArray);
+        System.out.println("String again from char array: " + str2);
+    }
+}
+
+OUTPUT:
+Enter some text:
+jayasri
+String from char array: jayasri
+Char array from string: j a y a s r i 
+String again from char array: jayasri
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        String data = "hello";
+        String hi = "hi %s my age %d";
+        System.out.println(data.equalsIgnoreCase("hello"));
+        System.out.printf(hi, "hello", 20);
+    }
+}
+
+OUTPUT:
+true
+hi hello my age 20
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a word: ");
+        String data = sc.nextLine();
+        System.out.print("Enter your age: ");
+        int age = sc.nextInt();
+        String hi = "hi %s my age %d";
+        System.out.println(data.equalsIgnoreCase("jayasri"));
+        System.out.printf(hi, data, age);
+    }
+}
+OUTPUT:
+Enter a word: jayasri
+Enter your age: 20
+true
+hi jayasri my age 20
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        char[] data = {'0','1','2','3','4','5','6','7','8','9'};
+        System.out.println(data);
+        String myString = "helloworld";
+        myString.getChars(7,10,data,4);
+        System.out.println(data);
+    }
+}
+OUTPUT:
+0123456789
+0123rld789
+
+public class Main {
+    public static void main(String[] args) {
+        char[] data={'9','1','1','7','2','3','2','0','5','0','0','7'};
+        System.out.print(data);
+        String mystring="Jayasri";
+        mystring.getChars(0,7,data,0);
+        System.out.print(mystring);
+ }
+}
+
+OUTPUT:
+911723205007Jayasri
+
+public class Main {
+    public static void main(String[] args) {
+        String name="jayasri";
+        byte[] arr=name.getBytes();
+        System.out.print(arr[0]);
+ }
+}
+OUTPUT:
+106
+
+public class Main {
+    public static void main(String[] args) {
+        String name="Jayasri";
+        System.out.print(name.toUpperCase());
+ }
+}
+
+OUTPUT:
+JAYASRI
+
+public class Main {
+    public static void main(String[] args) {
+        String name="Jayasri";
+        System.out.print(name.toLowerCase());
+ }
+}
+
+OUTPUT:
+jayasri
+
+public class Main {
+    public static void main(String[] args) {
+        String name="Jayasri Jorryn";
+        System.out.print(name.indexOf("Jorryn"));
+    }
+}
+OUTPUT:
+8
+
+public class Main {
+    public static void main(String[] args) {
+        String name="Jayasri Jorryn";
+        System.out.print(name.isEmpty ());
+    }
+}
+OUTPUT:
+false
+
+public class Main {
+    public static void main(String[] args) {
+        String x="Jayasri Jorryn";
+        String y ="";
+        System.out.println(x.isEmpty());
+        System.out.print(y.isEmpty());
+    }
+}
+
+OUTPUT:
+false
+true
+
+public class Main {
+    public static void main(String[] args) {
+        String name =String.join(" ","Jayasri","M");
+        System.out.println(name);
+    }
+}
+
+OUTPUT:
+Jayasri M
