@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class Main{
+    int x=5;
+    public static void main(String []args){
+        Main obj= new Main();
+        System.out.println(obj.x);
+    }
+}
+OUTPUT:
+5
+
+class Person{
+    String n;
+    public Person(String n){
+        this.n=n;
+    }
+    @Override
+    public String toString(){
+        return"Person{name:'"+n+"'}";
+    }
+    public static void main(String[]args){
+        Person p = new Person("Jayasri");
+        System.out.println(p.toString());
+    }
+}
+
+OUTPUT:
+Person{name:'Jayasri'}
+
